@@ -1,0 +1,45 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 2000px;
+    background: #d7d7d7;
+    .container {
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
+
+.circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 1900;
+    position: fixed;
+    right: 25px;
+    bottom: 35px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #5192e1, #23ced5);
+    opacity: 0;
+    transition: all 1s;
+    transform: scale(0);
+    // transform: scale(1);
+    &.active {
+        opacity: 1;
+        transition: all 0.5s;
+        // bottom: 20px;
+        // transform: scale(-1);
+        transform: scale(1);
+    }
+    button {
+        background: none;
+        border: none;
+        outline: none;
+        color: white;
+        position: absolute;
+        top: 11px;
+        right: 8px;
+        cursor: pointer;
+    }
+}
